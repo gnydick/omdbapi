@@ -26,6 +26,8 @@ func (o OmdbFetcher) Fetch() *OmdbResponse {
 	resp, _err := grequests.Get(url, nil)
 	if _err != nil {
 		log.Fatalln(fmt.Sprintf("Unable to make request: %s", _err.Error()))
+	} else if resp.StatusCode != 200 {
+		log.Fatalln(fmt.Sprintf("Unable to make request: %d - %s", resp.StatusCode, resp.String()))
 	}
 	or := OmdbResponse{}
 	_err = json.Unmarshal(resp.Bytes(), &or)
