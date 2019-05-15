@@ -1,0 +1,8 @@
+1) command line only
+2) runs on linux
+3) must take 1 parameter, name of a movie
+4) query API
+5) output Rotten Tomato rating in some useful way
+
+my key: 8df308b4
+api: http://www.omdbapi.com/?apikey=[yourkey]&
