@@ -10,7 +10,7 @@ import (
 func main() {
 	fetcher := setup()
 	or := fetcher.Fetch()
-	fmt.Println(or.PrettyPrint())
+	fmt.Println(or.PipeableOutput())
 }
 
 func setup() *OmdbFetcher {
